@@ -176,3 +176,124 @@ footer {
         flex: 1 1 100%;
     }
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(51, 51, 51, 0.8); /* Charcoal Gray with opacity */
+}
+
+.modal-content {
+    background-color: rgb(255, 255, 255); /* Soft White */
+    margin: 5% auto;
+    padding: 1em;
+    width: 600px; /* Set fixed width */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    color: rgb(51, 51, 51); /* Charcoal Gray */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal-body img {
+    width: 250px; /* Set width for images */
+    margin-right: 20px;
+}
+
+.modal-details {
+    flex: 1;
+}
+
+.modal-details h2,
+.modal-details p {
+    margin: 0.5em 0;
+}
+
+/* Cart Page Styles */
+body.cart-page {
+    background-color: rgb(229, 227, 236); /* Lavender Gray */
+}
+
+#cart-items {
+    padding: 2em;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cart-item img {
+    width: 100px;
+    margin-right: 1em;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-total {
+    text-align: right;
+    padding: 1em 2em;
+}
+
+.cart-total p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#checkout-button {
+    background-color: rgb(198, 45, 81); /* Deep Rose */
+}
+
+#checkout-button:hover {
+    background-color: rgb(247, 203, 107); /* Golden Yellow */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-body img {
+        margin: 0 0 1em 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin-bottom: 0.5em;
+    }
+
+    .cart-total {
+        text-align: center;
+    }
+}
