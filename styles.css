@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(51, 51, 51); /* Charcoal Gray */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(198, 45, 81); /* Deep Rose */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo {
+    color: rgb(255, 255, 255); /* Soft White */
+    font-size: 1.5em;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 1em;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255); /* Soft White */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(247, 203, 107); /* Golden Yellow */
+}
+
+.btn {
+    background-color: rgb(198, 45, 81); /* Deep Rose */
+    color: rgb(255, 255, 255); /* Soft White */
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(247, 203, 107); /* Golden Yellow */
+}
+
+/* Main Page Styles */
+body.main-page {
+    background-color: rgb(255, 236, 240); /* Soft Floral Pink */
+}
+
+header {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(229, 227, 236); /* Lavender Gray */
+    padding: 2em 1em;
+}
+
+.feature-card {
+    background-color: rgb(255, 255, 255); /* Soft White */
+    margin: 1em;
+    padding: 1em;
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+/* Catalog Page Styles */
+body.catalog-page {
+    background-color: rgb(229, 227, 236); /* Lavender Gray */
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em 1em;
+}
+
+.product-card {
+    background-color: rgb(255, 236, 240); /* Soft Floral Pink */
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    flex: 1 1 200px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card .btn {
+    background-color: rgb(96, 169, 87); /* Fresh Leaf Green */
+}
+
+.product-card .btn:hover {
+    background-color: rgb(247, 203, 107); /* Golden Yellow */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(51, 51, 51, 0.8); /* Charcoal Gray with opacity */
+}
+
+.modal-content {
+    background-color: rgb(255, 255, 255); /* Soft White */
+    margin: 5% auto;
+    padding: 2em;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: rgb(51, 51, 51); /* Charcoal Gray */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal-content .btn {
+    background-color: rgb(96, 169, 87); /* Fresh Leaf Green */
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(198, 45, 81); /* Deep Rose */
+    color: rgb(255, 255, 255); /* Soft White */
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .nav-links li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .features, .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card, .product-card {
+        flex: 1 1 100%;
+    }
+}
