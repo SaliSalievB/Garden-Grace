@@ -11,62 +11,63 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="#">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Our Flower Collection</h1>
         <div class="product-grid">
-            <!-- Product Card Example -->
+            <!-- Product Cards -->
             <div class="product-card">
-                <img src="gallery/img1.jpg" alt="Flower 1">
+                <img src="gallery/img1.jpg" alt="Rose Bouquet">
                 <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
+                <p>29.99 Лв</p>
                 <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img2.jpg"alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img2.jpg" alt="Tulip Bundle">
+                <h2>Tulip Bundle</h2>
+                <p>24.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="2">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img3.jpg" alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img3.jpg" alt="Sunflower Arrangement">
+                <h2>Sunflower Arrangement</h2>
+                <p>34.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="3">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img4.jpg" alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img4.jpg" alt="Lily Bouquet">
+                <h2>Lily Bouquet</h2>
+                <p>27.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="4">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img5.jpg" alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img5.jpg" alt="Potted Orchids">
+                <h2>Potted Orchids</h2>
+                <p>39.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="5">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img6.jpg" alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img6.jpg" alt="Daisy Bundle">
+                <h2>Daisy Bundle</h2>
+                <p>19.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="6">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img7.jpg" alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img7.jpg" alt="Hydrangea Bouquet">
+                <h2>Hydrangea Bouquet</h2>
+                <p>32.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="7">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="gallery/img8.jpg" alt="Flower 1">
-                <h2>Rose Bouquet</h2>
-                <p>$29.99</p>
-                <button class="btn add-to-cart" data-product-id="1">Add to Cart</button>
+                <img src="gallery/img8.jpg" alt="Mixed Flower Arrangement">
+                <h2>Mixed Flower Arrangement</h2>
+                <p>44.99 Лв</p>
+                <button class="btn add-to-cart" data-product-id="8">Add to Cart</button>
             </div>
+            <!-- Add more products as needed -->
         </div>
     </main>
 
@@ -74,16 +75,20 @@
     <div id="product-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <img id="modal-image" src="" alt="">
-            <h2 id="modal-title"></h2>
-            <p id="modal-price"></p>
-            <p id="modal-description"></p>
-            <button class="btn add-to-cart" id="modal-add-to-cart">Add to Cart</button>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="">
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-price"></p>
+                    <p id="modal-description"></p>
+                    <button class="btn add-to-cart" id="modal-add-to-cart">Add to Cart</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 Garden Grace</p>
+        <p>&copy; 2024 Garden Grace</p>
     </footer>
 
     <script src="script.js"></script>

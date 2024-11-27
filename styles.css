@@ -1,8 +1,20 @@
 /* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: rgb(51, 51, 51); /* Charcoal Gray */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
 }
 
 a {
@@ -65,6 +77,12 @@ header {
     padding: 2em 1em;
 }
 
+.coverimg img {
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +117,13 @@ body.catalog-page {
     padding: 1em;
     text-align: center;
     flex: 1 1 200px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
 }
 
 .product-card img {
@@ -115,67 +140,6 @@ body.catalog-page {
 }
 
 /* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(51, 51, 51, 0.8); /* Charcoal Gray with opacity */
-}
-
-.modal-content {
-    background-color: rgb(255, 255, 255); /* Soft White */
-    margin: 5% auto;
-    padding: 2em;
-    width: 80%;
-    max-width: 500px;
-    position: relative;
-}
-
-.close-button {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    color: rgb(51, 51, 51); /* Charcoal Gray */
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-.modal-content .btn {
-    background-color: rgb(96, 169, 87); /* Fresh Leaf Green */
-}
-
-/* Footer Styles */
-footer {
-    background-color: rgb(198, 45, 81); /* Deep Rose */
-    color: rgb(255, 255, 255); /* Soft White */
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .nav-links li {
-        display: block;
-        margin: 0.5em 0;
-    }
-
-    .features, .product-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-card, .product-card {
-        flex: 1 1 100%;
-    }
-}
 .modal {
     display: none;
     position: fixed;
@@ -227,9 +191,20 @@ footer {
     margin: 0.5em 0;
 }
 
+.modal-content .btn {
+    background-color: rgb(96, 169, 87); /* Fresh Leaf Green */
+}
+
 /* Cart Page Styles */
 body.cart-page {
     background-color: rgb(229, 227, 236); /* Lavender Gray */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
 }
 
 #cart-items {
@@ -269,8 +244,32 @@ body.cart-page {
     background-color: rgb(247, 203, 107); /* Golden Yellow */
 }
 
+/* Footer Styles */
+footer {
+    background-color: rgb(198, 45, 81); /* Deep Rose */
+    color: rgb(255, 255, 255); /* Soft White */
+    text-align: center;
+    padding: 1em;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
+    .nav-links li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .features,
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card,
+    .product-card {
+        flex: 1 1 100%;
+    }
+
     .modal-content {
         width: 90%;
     }
@@ -296,4 +295,66 @@ body.cart-page {
     .cart-total {
         text-align: center;
     }
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: rgb(255, 255, 255); /* Soft White */
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.cart-item img {
+    width: 100px;
+    margin-right: 1em;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details h2 {
+    margin: 0.5em 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.quantity-btn {
+    background-color: rgb(96, 169, 87); /* Fresh Leaf Green */
+    color: rgb(255, 255, 255); /* Soft White */
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quantity-btn:hover {
+    background-color: rgb(247, 203, 107); /* Golden Yellow */
+}
+
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+    margin: 0 0.5em;
+    border: 1px solid rgb(198, 45, 81); /* Deep Rose */
+    border-radius: 3px;
+    padding: 0.3em;
+}
+
+.remove-item {
+    background-color: rgb(198, 45, 81); /* Deep Rose */
+    color: rgb(255, 255, 255); /* Soft White */
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+.remove-item:hover {
+    background-color: rgb(247, 203, 107); /* Golden Yellow */
 }
